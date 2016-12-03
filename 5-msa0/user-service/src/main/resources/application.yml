@@ -1,0 +1,6 @@
+server:
+  port: 8181
+security:
+  oauth2:
+    resource:
+      userInfoUri: http://localhost:8080/uaa/userinfo

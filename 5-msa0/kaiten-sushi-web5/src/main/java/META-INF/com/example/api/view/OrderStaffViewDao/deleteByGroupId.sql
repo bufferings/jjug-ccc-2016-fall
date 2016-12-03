@@ -1,0 +1,1 @@
+DELETE FROM OrderStaffView WHERE orderGroupId = /* orderGroupId */2

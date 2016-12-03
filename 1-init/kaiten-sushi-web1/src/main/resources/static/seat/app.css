@@ -1,0 +1,23 @@
+@import url(http://fonts.googleapis.com/earlyaccess/notosansjp.css);
+
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+  display: none !important;
+}
+
+html {
+  font-family: "Noto Sans", "Noto Sans CJK JP", sans-serif;
+}
+
+.pageContainer {
+    opacity: 1;
+    transition:all .2s linear 0s;
+}
+.pageContainer.ng-leave-active {
+    opacity: 0;
+}
+.pageContainer.ng-enter{
+    opacity: 0;
+}
+.pageContainer.ng-enter-active {
+    opacity: 0;
+ }

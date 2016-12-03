@@ -1,0 +1,29 @@
+<div class="container">
+<div class="card white">
+<h4 class="center-align">注文状況</h4>
+
+  <table class="bordered">
+    <thead>
+      <tr>
+        <th data-field="image"></th>
+        <th data-field="name">お品物</th>
+        <th data-field="order-time">注文時間</th>
+        <th data-field="order-count">注文数</th>
+        <th data-field="table-number">テーブル</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr ng-repeat="order in orders">
+        <td><img ng-src="/img/product/{{ order.productId }}.png"
+            class="responsive-img" width="100px"></img></td>
+        <td>{{ order.productName }}</td>
+        <td>{{ order.orderDateTime.hour | numberFixedLen:2 }}:{{ order.orderDateTime.minute | numberFixedLen:2 }}</td>
+        <td>{{ order.quantity }} 皿</td>
+        <td>{{ order.tableNumber }} 番</td>
+        <td><a class="waves-effect waves-light btn-large" ng-click="deliver(order.orderGroupId, order.orderId)">お届け</a></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+</div>

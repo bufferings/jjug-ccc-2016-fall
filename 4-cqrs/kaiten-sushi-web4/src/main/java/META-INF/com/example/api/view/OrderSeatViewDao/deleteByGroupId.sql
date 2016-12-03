@@ -1,0 +1,1 @@
+DELETE FROM OrderSeatView WHERE orderGroupId = /* orderGroupId */2

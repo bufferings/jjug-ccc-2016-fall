@@ -1,0 +1,37 @@
+<html ng-app="staffApp">
+<head>
+<meta charset="utf-8">
+<title>ばふぁ寿司</title>
+
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link rel="stylesheet" href="/webjars/materializecss/0.97.7/css/materialize.min.css">
+<link rel="stylesheet" href="app.css">
+
+</head>
+<body class="grey lighten-2">
+  <nav>
+    <div class="nav-wrapper blue-grey darken-2">
+      <a href="#/" class="brand-logo"><i>🍣</i>ばふぁ寿司: スタッフ用</a> <a href="#"
+        data-activates="mobile-demo" class="button-collapse"><i
+        class="material-icons">menu</i></a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="#/checkout"
+          class="waves-effect waves-light btn-large orange darken-2">お会計待ち一覧</a></li>
+      </ul>
+      <ul class="side-nav" id="mobile-demo">
+        <li><a href="#/checkout"
+          class="waves-effect waves-light btn-large orange darken-2">お会計待ち一覧</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div ng-view class="pageContainer"></div>
+
+  <script src="/webjars/jquery/2.2.4/jquery.min.js"></script>
+  <script src="/webjars/materializecss/0.97.7/js/materialize.min.js"></script>
+  <script src="/webjars/angularjs/1.5.9/angular.min.js"></script>
+  <script src="/webjars/angularjs/1.5.9/angular-route.min.js"></script>
+  <script src="/webjars/angularjs/1.5.9/angular-animate.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
