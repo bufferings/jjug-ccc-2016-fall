@@ -22,7 +22,6 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
     <java.version>1.8</java.version>
-    <docker.image.prefix>bufferings</docker.image.prefix>
   </properties>
 
   <dependencies>
@@ -66,29 +65,10 @@
   </dependencyManagement>
 
   <build>
-    <finalName>app</finalName>
     <plugins>
       <plugin>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-maven-plugin</artifactId>
-      </plugin>
-
-      <plugin>
-        <groupId>com.spotify</groupId>
-        <artifactId>docker-maven-plugin</artifactId>
-        <version>0.4.13</version>
-        <configuration>
-          <useConfigFile>true</useConfigFile>
-          <imageName>${docker.image.prefix}/${project.artifactId}</imageName>
-          <dockerDirectory>src/main/docker</dockerDirectory>
-          <resources>
-            <resource>
-              <targetPath>/</targetPath>
-              <directory>${project.build.directory}</directory>
-              <include>${project.build.finalName}.jar</include>
-            </resource>
-          </resources>
-        </configuration>
       </plugin>
     </plugins>
   </build>
